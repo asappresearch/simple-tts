@@ -1,6 +1,9 @@
 # Simple-TTS
 
-This repo contains the implementation for Simple-TTS, a latent diffusion model for text-to-speech generation.
+This repo contains the implementation for Simple-TTS, a latent diffusion model for text-to-speech generation. Our submission describing this work is currently under review:
+
+**Simple-TTS: End-to-End Text-to-Speech Synthesis with Latent Diffusion**\
+by Justin Lovelace, Soham Ray, Kwangyoun Kim, Kilian Q. Weinberger, and Felix Wu
 
 ## Environment
 Install the required dependencies with:
@@ -31,7 +34,7 @@ We provide a sample script to train the diffusion model with reasonable hyperpar
 ./scripts/train/train.sh
 ``` 
 
-We use [Huggingface Accelerate](https://huggingface.co/docs/accelerate/index) for distributed training and trained our final model on a `g5.48xlarge` instance (8 Nvidia A10Gs). After running `accelerate config` to set the appropriate environment variables (e.g. number of GPUs), a distributed training job can be launced with
+We use [Huggingface Accelerate](https://huggingface.co/docs/accelerate/index) for distributed training and trained our final model on a `g5.48xlarge` instance (8 Nvidia A10Gs). After running `accelerate config` to set the appropriate environment variables (e.g. number of GPUs), a distributed training job with our hyperparameter settings can be launced with
 ```bash
 ./scripts/train/train_distributed.sh
 ``` 
